@@ -6,12 +6,11 @@
 /*   By: lsteiner <lsteiner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:22:41 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/02 15:06:25 by lsteiner         ###   ########.fr       */
+/*   Updated: 2021/04/02 15:30:05 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_char_write(char use)
 {
