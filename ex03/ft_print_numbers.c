@@ -6,7 +6,7 @@
 /*   By: lsteiner <lsteiner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 13:58:40 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/02 14:07:07 by lsteiner         ###   ########.fr       */
+/*   Updated: 2021/04/02 14:09:10 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,4 @@ void	ft_print_numbers(void)
 		write(STDOUT_FILENO, &number, 1);
 		number++;
 	}
-}
-
-int main(void){
-	ft_print_numbers();
 }
