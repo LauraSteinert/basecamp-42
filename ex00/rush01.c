@@ -6,16 +6,20 @@
 /*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 22:28:52 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/03 01:44:29 by pyago-ra         ###   ########.fr       */
+/*   Updated: 2021/04/03 22:43:58 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_putchar.h"
-#include "./rush01.h"
+void	ft_putchar(char c);
+void	rush(int x, int y);
+int		ft_is_line(int x, int y);
+void	ft_print(int x, int y, int x_max, int y_max);
+char	ft_select_caractere(int x, int y, int x_max, int y_max);
 
 void	rush(int x, int y)
 {
-	ft_print(x, y, x, y);
+	if (x > 0 && y > 0)
+		ft_print(x, y, x, y);
 }
 
 int		ft_is_line(int x, int y)

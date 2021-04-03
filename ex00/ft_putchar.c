@@ -6,11 +6,11 @@
 /*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 22:26:35 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/03 00:42:56 by pyago-ra         ###   ########.fr       */
+/*   Updated: 2021/04/03 22:43:26 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft_putchar.h"
+#include <unistd.h>
 
 void	ft_putchar(char c)
 {
