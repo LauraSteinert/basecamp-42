@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush00.c                                           :+:      :+:    :+:   */
+/*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/03 15:53:18 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/03 23:10:04 by pyago-ra         ###   ########.fr       */
+/*   Created: 2021/04/02 22:28:52 by lsteiner          #+#    #+#             */
+/*   Updated: 2021/04/03 22:57:06 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,18 @@ int		ft_is_line(int x, int y);
 void	ft_print(int x, int y, int x_max, int y_max);
 char	ft_select_caractere(int x, int y, int x_max, int y_max);
 
-int		ft_is_line(int x, int y)
-{
-	if ((x != 1 && y == 1))
-		return (1);
-	else
-		return (0);
-}
-
 void	rush(int x, int y)
 {
 	if (x > 0 && y > 0)
 		ft_print(x, y, x, y);
+}
+
+int		ft_is_line(int x, int y)
+{
+	if ((x == 1 && y != 1) || (x != 1 && y == 1))
+		return (1);
+	else
+		return (0);
 }
 
 void	ft_print(int x, int y, int x_max, int y_max)
@@ -52,24 +52,20 @@ char	ft_select_caractere(int x, int y, int x_max, int y_max)
 	if (ft_is_line(x_max, y_max))
 	{
 		if (x == x_max && y == y_max)
-			return ('o');
+			return ('A');
 		else if ((x == 1 && y == y_max) || (x == x_max && y == 1))
-			return ('o');
+			return ('C');
 		else
-			return ('-');
+			return ('B');
 	}
 	else
 	{
-		if ((x == x_max && y == y_max) || (x == x_max && y == 1))
-			return ('o');
-		else if ((y == y_max && x == 1) || (y == 1 && x == 1))
-			return ('o');
-		else if ((x == x_max) || (x == 1) || (x_max == 1 && y_max != 1))
-			return ('|');
-		else if (ft_is_line(x, y) && y_max != 1)
-			return ('-');
-		else if (x != 1 && y == y_max && y_max != 1)
-			return ('-');
+		if ((x == x_max && y == y_max) || (x == 1 && y == 1))
+			return ('A');
+		else if ((x == 1 && y == y_max) || (x == x_max && y == 1))
+			return ('C');
+		else if ((x == x_max || x == 1) || (y == y_max || y == 1))
+			return ('B');
 		else
 			return (' ');
 	}

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rushT.c                                            :+:      :+:    :+:   */
+/*   rush03.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lde-fari <lde-fari@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 01:53:38 by lde-fari          #+#    #+#             */
-/*   Updated: 2021/04/03 22:39:30 by lde-fari         ###   ########.fr       */
+/*   Updated: 2021/04/03 23:32:24 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@ void	ft_putchar(char c);
 
 void	ft_verify(int col_x, int lin_y, int x, int y)
 {
-	if ((col_x == y || col_x == 1) && (col_x == y))
+	if ((lin_y == 1 && col_x == 1) || (lin_y == 1 && col_x == y))
 	{
 		ft_putchar('A');
 	}
-	else if ((lin_y == 1 || col_x == 1) && (lin_y == x))
+	else if ((lin_y == x && col_x == 1) || (lin_y == x && col_x == y))
 	{
 		ft_putchar('C');
 	}
@@ -50,3 +50,5 @@ void	rush(int x, int y)
 		col_x = col_x + 1;
 	}
 }
+
+
