@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsteiner <lsteiner@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 22:26:35 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/02 22:28:26 by lsteiner         ###   ########.fr       */
+/*   Updated: 2021/04/03 00:42:56 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "./ft_putchar.h"
 
 void	ft_putchar(char c)
 {
-	write(1,&c,1);
+	write(1, &c, 1);
 }

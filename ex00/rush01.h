@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   rush01.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/02 22:25:23 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/03 00:46:56 by pyago-ra         ###   ########.fr       */
+/*   Created: 2021/04/03 00:44:45 by pyago-ra          #+#    #+#             */
+/*   Updated: 2021/04/03 00:53:16 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./rush01.h"
+#ifndef RUSH01_H
+# define RUSH01_H
 
-int	main(int c_args, char **s_args)
-{
-	int x;
-	int y;
+int		is_line(int x, int y);
+void	rush(int x, int y);
+void	print(int x, int y, int x_max, int y_max);
+char	select_caractere(int x, int y, int x_max, int y_max);
 
-	x = s_args[c_args - 2][0] - '0';
-	y = s_args[c_args - 1][0] - '0';
-	rush(x, y);
-	return (0);
-}
+#endif
