@@ -6,14 +6,19 @@
 /*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 22:28:52 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/03 00:59:26 by pyago-ra         ###   ########.fr       */
+/*   Updated: 2021/04/03 01:44:29 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft_putchar.h"
 #include "./rush01.h"
 
-int		is_line(int x, int y)
+void	rush(int x, int y)
+{
+	ft_print(x, y, x, y);
+}
+
+int		ft_is_line(int x, int y)
 {
 	if ((x == 1 && y != 1) || (x != 1 && y == 1))
 		return (1);
@@ -21,19 +26,14 @@ int		is_line(int x, int y)
 		return (0);
 }
 
-void	rush(int x, int y)
-{
-	print(x, y, x, y);
-}
-
-void	print(int x, int y, int x_max, int y_max)
+void	ft_print(int x, int y, int x_max, int y_max)
 {
 	while (y > 0)
 	{
 		while (x >= 0)
 		{
 			if (x != 0)
-				ft_putchar(select_caractere(x, y, x_max, y_max));
+				ft_putchar(ft_select_caractere(x, y, x_max, y_max));
 			else
 				ft_putchar('\n');
 			x--;
@@ -43,9 +43,9 @@ void	print(int x, int y, int x_max, int y_max)
 	}
 }
 
-char	select_caractere(int x, int y, int x_max, int y_max)
+char	ft_select_caractere(int x, int y, int x_max, int y_max)
 {
-	if (is_line(x_max, y_max))
+	if (ft_is_line(x_max, y_max))
 	{
 		if (x == x_max && y == y_max)
 			return ('/');
@@ -56,7 +56,7 @@ char	select_caractere(int x, int y, int x_max, int y_max)
 	}
 	else
 	{
-		if (((x == x_max && y == y_max) || (x == 1 && y == 1)) && !is_line(x, y))
+		if ((x == x_max && y == y_max) || (x == 1 && y == 1))
 			return ('/');
 		else if ((x == 1 && y == y_max) || (x == x_max && y == 1))
 			return ('\\');
