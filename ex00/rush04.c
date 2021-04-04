@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.c                                           :+:      :+:    :+:   */
+/*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 22:28:52 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/03 22:57:18 by pyago-ra         ###   ########.fr       */
+/*   Updated: 2021/04/03 22:57:06 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,20 +52,20 @@ char	ft_select_caractere(int x, int y, int x_max, int y_max)
 	if (ft_is_line(x_max, y_max))
 	{
 		if (x == x_max && y == y_max)
-			return ('/');
+			return ('A');
 		else if ((x == 1 && y == y_max) || (x == x_max && y == 1))
-			return ('\\');
+			return ('C');
 		else
-			return ('*');
+			return ('B');
 	}
 	else
 	{
 		if ((x == x_max && y == y_max) || (x == 1 && y == 1))
-			return ('/');
+			return ('A');
 		else if ((x == 1 && y == y_max) || (x == x_max && y == 1))
-			return ('\\');
+			return ('C');
 		else if ((x == x_max || x == 1) || (y == y_max || y == 1))
-			return ('*');
+			return ('B');
 		else
 			return (' ');
 	}
