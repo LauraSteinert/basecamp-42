@@ -1,5 +1,0 @@
-norminette
-	/etc/norminette-client/norminette.rb -R CheckForbiddenSourceHeader "$1" | cat
-
-compilar 
-	gcc -Wall -Werror -Wextra ft_putchar.c main.c
