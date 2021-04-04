@@ -6,7 +6,7 @@
 /*   By: lsteiner <lsteiner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:22:41 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/02 15:30:05 by lsteiner         ###   ########.fr       */
+/*   Updated: 2021/04/04 02:21:42 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_char_write(char use)
 {
-	write(STDOUT_FILENO, &use, 1);
+	write(1, &use, 1);
 }
 
 void	ft_print_in_order(int first, int second, int third)
@@ -22,8 +22,11 @@ void	ft_print_in_order(int first, int second, int third)
 	ft_char_write(first);
 	ft_char_write(second);
 	ft_char_write(third);
-	ft_char_write(',');
-	ft_char_write(' ');
+	if (first != 7 && second != 8 && third != 9)
+	{
+		ft_print_char(',');
+		ft_print_char(' ');
+	}
 }
 
 void	ft_print_comb(void)

@@ -6,7 +6,7 @@
 /*   By: lsteiner <lsteiner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 20:13:57 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/03 02:20:31 by lsteiner         ###   ########.fr       */
+/*   Updated: 2021/04/03 02:34:39 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	ft_print_comb2(void)
 	int first;
 	int second;
 
-	first = 00;
-	second = 00;
+	first = 0;
+	second = 0;
 	while (first <= 98)
 	{
 		second = first + 1;
