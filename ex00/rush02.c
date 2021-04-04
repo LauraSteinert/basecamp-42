@@ -6,47 +6,43 @@
 /*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 01:53:38 by lde-fari          #+#    #+#             */
-/*   Updated: 2021/04/03 22:56:37 by pyago-ra         ###   ########.fr       */
+/*   Updated: 2021/04/04 23:20:20 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
+void	ft_verify(int lin_x, int col_y, const int x, const int y);
 
-void	ft_verify(int col_x, int lin_y, int x, int y)
+void	rush(const int x, const int y)
 {
-	if ((col_x == y || col_x == 1) && (lin_y == 1))
+	int col_y;
+	int lin_x;
+
+	if (x > 0 && y > 0)
 	{
-		ft_putchar('A');
-	}
-	else if ((col_x == y || col_x == 1) && (lin_y == x))
-	{
-		ft_putchar('C');
-	}
-	else if ((col_x < y && col_x > 1) && (lin_y < x && lin_y > 1))
-	{
-		ft_putchar(' ');
-	}
-	else
-	{
-		ft_putchar('B');
+		lin_x = 1;
+		while (lin_x <= y)
+		{
+			col_y = 1;
+			while (col_y <= x)
+			{
+				ft_verify(lin_x, col_y, x, y);
+				col_y = col_y + 1;
+			}
+			ft_putchar('\n');
+			lin_x = lin_x + 1;
+		}
 	}
 }
 
-void	rush(int x, int y)
+void	ft_verify(int lin_x, int col_y, const int x, const int y)
 {
-	int col_x;
-	int lin_y;
-
-	col_x = 1;
-	while (col_x <= y)
-	{
-		lin_y = 1;
-		while (lin_y <= x)
-		{
-			ft_verify(col_x, lin_y, x, y);
-			lin_y = lin_y + 1;
-		}
-		ft_putchar('\n');
-		col_x = col_x + 1;
-	}
+	if ((lin_x == y || lin_x == 1) && (col_y == 1))
+		ft_putchar('A');
+	else if ((lin_x == y || lin_x == 1) && (col_y == x))
+		ft_putchar('C');
+	else if ((lin_x < y && lin_x > 1) && (col_y < x && col_y > 1))
+		ft_putchar(' ');
+	else
+		ft_putchar('B');
 }

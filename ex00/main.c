@@ -6,19 +6,14 @@
 /*   By: pyago-ra <pyago-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 22:25:23 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/03 22:43:41 by pyago-ra         ###   ########.fr       */
+/*   Updated: 2021/04/04 23:17:34 by pyago-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	rush(int x, int y);
 
-int		main(int args_c, char **args_s)
+int		main(void)
 {
-	int x;
-	int y;
-
-	x = args_s[args_c - 2][0] - '0';
-	y = args_s[args_c - 1][0] - '0';
-	rush(x, y);
+	rush(1, 10);
 	return (0);
 }
