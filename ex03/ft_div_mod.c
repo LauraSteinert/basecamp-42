@@ -6,12 +6,12 @@
 /*   By: lsteiner <lsteiner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 00:16:52 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/05 00:47:36 by lsteiner         ###   ########.fr       */
+/*   Updated: 2021/04/05 21:31:06 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*div = (a/b);
-	*mod = (a%b);
+	*div = (a / b);
+	*mod = (a % b);
 }
