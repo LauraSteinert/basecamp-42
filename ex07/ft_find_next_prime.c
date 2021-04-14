@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsteiner <lsteiner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/14 14:12:29 by lsteiner          #+#    #+#             */
-/*   Updated: 2021/04/14 17:20:55 by lsteiner         ###   ########.fr       */
+/*   Created: 2021/04/14 19:44:51 by lsteiner          #+#    #+#             */
+/*   Updated: 2021/04/14 19:45:06 by lsteiner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sqrt(int nb)
+int ft_find_next_prime(int nb)
 {
-	int i;
-
-	i = 1;
-	if (nb <= 0)
-		return (0);
-	while (i * i < nb && i < 46340)
-		i++;
-	if (i * i == nb)
-		return (i);
-	else
-		return (0);
+	
 }
